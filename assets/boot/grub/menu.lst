@@ -1,0 +1,7 @@
+default 0
+timeout 1
+
+title           Debian Wheezy
+root            (hd0)
+kernel		/boot/vmlinuz-3.12-0.bpo.1-amd64 ro root=LABEL=instanceroot rootdelay=9 console=hvc0
+initrd		/boot/initrd.img-3.12-0.bpo.1-amd64
