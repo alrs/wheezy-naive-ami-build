@@ -28,6 +28,11 @@ chroot $TARGET_DIR service ssh stop
 chroot $TARGET_DIR service ntp stop
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install initramfs-tools
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install linux-image-3.12-0.bpo.1-amd64
+chroot $TARGET_DIR insserv -r /etc/init.d/hwclock.sh
+chroot $TARGET_DIR insserv -d /etc/init.d/ec2-get-credentials
+chroot $TARGET_DIR insserv -d /etc/init.d/ec2-run-user-data
+chroot $TARGET_DIR insserv -d /etc/init.d/generate-ssh-hostkeys
+
 rm $TARGET_DIR/etc/ssh/ssh_host*
 
 cp -R assets/* $TARGET_DIR
