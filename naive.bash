@@ -7,7 +7,6 @@ TARGET_DIR=/target
 IMAGE_SIZE=3000
 
 service dbus stop
-#service udev stop
 
 dd if=/dev/zero of=$RAW_IMAGE bs=1M count=$IMAGE_SIZE
 
