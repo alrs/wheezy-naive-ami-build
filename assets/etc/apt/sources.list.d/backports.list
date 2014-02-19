@@ -1,1 +1,2 @@
-deb http://ftp.us.debian.org/debian wheezy-backports main
+deb http://cloudfront.debian.net/debian wheezy-backports main contrib
+deb-src http://cloudfront.debian.net/debian wheezy-backports main contrib

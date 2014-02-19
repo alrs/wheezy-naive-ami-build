@@ -1,0 +1,2 @@
+deb http://cloudfront.debian.net/debian wheezy main contrib
+deb-src http://cloudfront.debian.net/debian wheezy main contrib
