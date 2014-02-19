@@ -23,8 +23,9 @@ chroot $TARGET_DIR apt-get update
 chroot $TARGET_DIR mount -t proc none /proc
 chroot $TARGET_DIR mount -t devpts none /dev/pts
 chroot $TARGET_DIR apt-get -y install locales locales-all
-chroot $TARGET_DIR apt-get -y install vim-nox ssh git-core sudo xfsprogs
+chroot $TARGET_DIR apt-get -y install vim-nox ssh git-core sudo xfsprogs ntp
 chroot $TARGET_DIR service ssh stop
+chroot $TARGET_DIR service ntp stop
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install initramfs-tools
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install linux-image-3.12-0.bpo.1-amd64
 rm $TARGET_DIR/etc/ssh/ssh_host*
