@@ -35,6 +35,7 @@ chroot $TARGET_DIR insserv -d /etc/init.d/ec2-run-user-data
 chroot $TARGET_DIR insserv -d /etc/init.d/generate-ssh-hostkeys
 
 rm $TARGET_DIR/etc/ssh/ssh_host*
+rm $TARGET_DIR/var/cache/apt/archives/*.deb
 
 cp -R assets/* $TARGET_DIR
 
