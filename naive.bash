@@ -15,7 +15,7 @@ mkfs.xfs -L instanceroot $RAW_IMAGE
 
 mount -o loop $RAW_IMAGE $TARGET_DIR
 
-http_proxy=http://localhost:3142/ debootstrap wheezy $TARGET_DIR
+debootstrap wheezy $TARGET_DIR
 
 cp -R assets/* $TARGET_DIR
 
