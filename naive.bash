@@ -41,6 +41,6 @@ cp -R assets/* $TARGET_DIR
 
 umount $TARGET_DIR/proc
 umount $TARGET_DIR/dev/pts
-umount $TARGET_DIR
+umount -l $TARGET_DIR
 
 echo $RAW_IMAGE
