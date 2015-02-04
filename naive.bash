@@ -23,9 +23,10 @@ chroot $TARGET_DIR apt-get update
 chroot $TARGET_DIR mount -t proc none /proc
 chroot $TARGET_DIR mount -t devpts none /dev/pts
 chroot $TARGET_DIR apt-get -y install locales locales-all
-chroot $TARGET_DIR apt-get -y install vim-nox ssh git-core sudo xfsprogs ntp ruby ruby1.9.1 curl lsb-release python2.7-dev python-pip python-virtualenv pciutils resolvconf
+chroot $TARGET_DIR apt-get -y install vim-nox ssh git-core sudo xfsprogs ntp ruby ruby1.9.1 curl lsb-release python2.7-dev python-pip python-virtualenv pciutils resolvconf haveged htop
 chroot $TARGET_DIR service ssh stop
 chroot $TARGET_DIR service ntp stop
+chroot $TARGET_DIR service haveged stop
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install initramfs-tools
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install linux-image-3.12-0.bpo.1-amd64
 chroot $TARGET_DIR pip install awscli
