@@ -28,7 +28,7 @@ chroot $TARGET_DIR service ssh stop
 chroot $TARGET_DIR service ntp stop
 chroot $TARGET_DIR service haveged stop
 chroot $TARGET_DIR apt-get -y -t wheezy-backports install initramfs-tools
-chroot $TARGET_DIR apt-get -y -t wheezy-backports install linux-image-3.12-0.bpo.1-amd64
+chroot $TARGET_DIR apt-get -y -t wheezy-backports install linux-image-3.16.0-0.bpo.4-amd64
 chroot $TARGET_DIR pip install awscli
 chroot $TARGET_DIR insserv -r /etc/init.d/hwclock.sh
 chroot $TARGET_DIR insserv -d /etc/init.d/ec2-get-credentials
